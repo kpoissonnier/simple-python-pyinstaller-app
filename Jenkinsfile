@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('fetch sources') {
       steps {
-        git(url: 'github.com:kpoissonnier/simple-python-pyinstaller-app.git', branch: 'master', credentialsId: '5ee8b52a75df71b1600dd0d1deede8ef0bf9ea36')
+        git(url: 'git@github.com:kpoissonnier/simple-python-pyinstaller-app.git', branch: 'master', credentialsId: '5ee8b52a75df71b1600dd0d1deede8ef0bf9ea36', changelog: true, poll: true)
       }
     }
     stage('Build') {
